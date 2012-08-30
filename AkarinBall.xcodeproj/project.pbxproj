@@ -14,6 +14,7 @@
 		5FB3113315EF4BBA00F7F25F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3113115EF4BBA00F7F25F /* MainMenu.xib */; };
 		5FB3113615EF4BBA00F7F25F /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3113515EF4BBA00F7F25F /* rb_main.rb */; };
 		5FB3113815EF4BBA00F7F25F /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5FB3113715EF4BBA00F7F25F /* AppDelegate.rb */; };
+		5FB3114215EF4BC800F7F25F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB3114115EF4BC800F7F25F /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		5FB3113215EF4BBA00F7F25F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5FB3113515EF4BBA00F7F25F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		5FB3113715EF4BBA00F7F25F /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		5FB3114115EF4BC800F7F25F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB3114215EF4BC800F7F25F /* WebKit.framework in Frameworks */,
 				5FB3112115EF4BB900F7F25F /* Cocoa.framework in Frameworks */,
 				5FB3112315EF4BB900F7F25F /* MacRuby.framework in Frameworks */,
 			);
@@ -55,6 +58,7 @@
 		5FB3111115EF4BB900F7F25F = {
 			isa = PBXGroup;
 			children = (
+				5FB3114115EF4BC800F7F25F /* WebKit.framework */,
 				5FB3112715EF4BB900F7F25F /* AkarinBall */,
 				5FB3111F15EF4BB900F7F25F /* Frameworks */,
 				5FB3111D15EF4BB900F7F25F /* Products */,
@@ -287,6 +291,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"/Library/Frameworks/**",
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -304,6 +309,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"/Library/Frameworks/**",
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

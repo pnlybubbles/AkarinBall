@@ -128,11 +128,12 @@
 /* Begin PBXLegacyTarget section */
 		5FB3112415EF4BB900F7F25F /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed";
+			buildArgumentsString = "--compile --embed --gem oauth";
 			buildConfigurationList = 5FB3113E15EF4BBA00F7F25F /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 				5FB3112615EF4BB900F7F25F /* PBXTargetDependency */,
 			);

@@ -36,17 +36,17 @@ class AppDelegate
     def initialize
         @cnt = 0
         @tl_deta = Hash.new{|h,k| h[k]=Hash.new(&h.default_proc)}
-        dir_path = NSBundle.mainBundle.bundlePath
+        @dir_path = NSBundle.mainBundle.bundlePath
         
-        unless File.exist?("#{dir_path}/Contents/Preferences/oauth_key.plist")
-            FileUtils.mkdir_p("#{dir_path}/Contents/Preferences")
-            output_file = File.open("#{dir_path}/Contents/Preferences/oauth_key.plist", "w")
+        unless File.exist?("#{@dir_path}/Contents/Preferences/oauth_key.plist")
+            FileUtils.mkdir_p("#{@dir_path}/Contents/Preferences")
+            output_file = File.open("#{@dir_path}/Contents/Preferences/oauth_key.plist", "w")
             output_deta = {'access_token'=>'＼ｱｯｶﾘ〜ﾝ／','access_token_secret'=>'＼ｱｯｶﾘ〜ﾝ／'}
             output_file.write(output_deta.to_plist)
             output_file.close
         end
         
-        oauth_key_plist = NSString.stringWithContentsOfFile("#{dir_path}/Contents/Preferences/oauth_key.plist",
+        oauth_key_plist = NSString.stringWithContentsOfFile("#{@dir_path}/Contents/Preferences/oauth_key.plist",
                                                             encoding:NSUTF8StringEncoding,
                                                             error:nil)
         oauth_key = load_plist(oauth_key_plist)
@@ -243,7 +243,7 @@ class AppDelegate
         $access_token        = access_token.token
         $access_token_secret = access_token.secret
         output_deta = {'access_token'=>$access_token,'access_token_secret'=>$access_token_secret}
-        output_file = File.open("#{dir_path}/Contents/Preferences/oauth_key.plist", "w")
+        output_file = File.open("#{@dir_path}/Contents/Preferences/oauth_key.plist", "w")
         output_file.write(output_deta.to_plist)
         output_file.close
         twitterAuthWindow.close
